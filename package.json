@@ -1,7 +1,7 @@
 {
-  "name": "natural-person",
+  "name": "supertest-poc",
   "version": "1.0.0",
-  "description": "automated script for natural-person api",
+  "description": "This is a POC of a SuperTest automation project with Mochawesome reports.",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./specs/*/*.js",
