@@ -9,7 +9,9 @@ class Dependencies {
         this.addContext = require('mochawesome/addContext')
         this.request = supertest("http://localhost:5000/")
         this.faker = require('faker')
+        this.mongoose = require('mongoose')
+        this.bluebird = require(`bluebird`)
     }
 }
 
-module.exports = Dependencies
+module.exports = new Dependencies()

@@ -10,9 +10,11 @@
   "author": "Caio Majdalani",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.3",
     "chai": "^4.2.0",
     "faker": "^4.1.0",
     "mochawesome": "^3.1.1",
+    "mongoose": "^5.4.10",
     "supertest": "^3.4.2"
   }
 }

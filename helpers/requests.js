@@ -8,4 +8,4 @@ class Requests {
     }
 }
 
-module.exports = Requests
+module.exports = new Requests()

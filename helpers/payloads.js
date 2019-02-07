@@ -8,4 +8,4 @@ class Payloads {
     }
 }
 
-module.exports = Payloads
+module.exports = new Payloads()

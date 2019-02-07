@@ -16,4 +16,4 @@ class Reports {
     }
 }
 
-module.exports = Reports
+module.exports = new Reports()
