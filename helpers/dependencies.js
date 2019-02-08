@@ -11,6 +11,7 @@ class Dependencies {
         this.faker = require('faker')
         this.mongoose = require('mongoose')
         this.bluebird = require(`bluebird`)
+        this.postgres = require(`pg`)
     }
 }
 

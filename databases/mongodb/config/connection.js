@@ -1,16 +1,16 @@
 'use strict'
 
-const mongoose = require(`./dependencies`).mongoose
-    , bluebird = require(`./dependencies`).bluebird
+const mongoose = require(`../../../helpers/dependencies`).mongoose
+    , bluebird = require(`../../../helpers/dependencies`).bluebird
 
-class Databases {
-    mongoDisconnect(callback) {
+class MongoDb {
+    disconnect(callback) {
         mongoose.connection.close(() => {
             console.info(`[*] MONGODB DISCONNECTED`)
             callback()
         })
     }
-    mongoConnect(url, options) {
+    connect(url, options) {
         mongoose.Promise = bluebird
 
         mongoose.set(`debug`, true)
@@ -28,7 +28,7 @@ class Databases {
     }
 }
 
-module.exports = new Databases()
+module.exports = new MongoDb()
 
 // OPTIONS: {
 //         autoIndex: _mongodb.INDEX,
