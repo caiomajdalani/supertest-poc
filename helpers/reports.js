@@ -1,19 +1,25 @@
 'use strict'
 
-class Reports {
-    addContext(reporter, test, method, url, headers = {}, body = {}, httpCode = 201, response) {
+const reporter = require(`./dependencies`).addContext
+
+module.exports = {
+    addContext: (test, method, url, headers = {}, body = {}, httpCode = 201, response) => {
         return reporter(test, {
-            title: 'Request Parameters',
+            title: 'Request / Response',
             value: {
-                URL: url,
-                Method: method,
-                Headers: headers,
-                Body: body,
-                HttpCodeExpect: httpCode,
-                Response: response
+                Request: {
+                    URL: url,
+                    Method: method,
+                    Headers: headers,
+                    Body: body,
+                },
+                Expect: {
+                    HttpCode: httpCode,
+                },
+                Response: {
+                    Body: response
+                }
             }
         })
     }
 }
-
-module.exports = new Reports()

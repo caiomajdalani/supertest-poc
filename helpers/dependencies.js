@@ -7,11 +7,10 @@ class Dependencies {
         this.expect = require("chai").expect
         this.assert = require(`chai`).assert
         this.addContext = require('mochawesome/addContext')
-        this.request = supertest("http://localhost:5000/")
+        this.request = supertest("http://localhost:8080/api/v1/")
         this.faker = require('faker')
         this.mongoose = require('mongoose')
         this.bluebird = require(`bluebird`)
-        this.postgres = require(`pg`)
     }
 }
 
