@@ -7,6 +7,7 @@ const dependencies = require(`../../helpers/dependencies`)
     , errors = require(`../../helpers/errors`)
     , headers = require(`../../helpers/headers`)
     , mongo = require(`../../databases/mongodb`)
+    , postgres = require(`../../databases/postgres`)
 
 const test = this
 
